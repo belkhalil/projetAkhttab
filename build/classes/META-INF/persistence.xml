@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="ConflictDetectionv1" transaction-type="RESOURCE_LOCAL">
+	<class>com.conflict.entities.Assertion</class>
+	
+	<class>com.conflict.entities.Fact</class>
+	<class>com.conflict.entities.HealthProvider</class>
+	<class>com.conflict.entities.law</class>
+	<class>com.conflict.entities.Patient</class>
+	<class>com.conflict.entities.Privacypolicy</class>
+	<class>com.conflict.entities.Query</class>
+	<class>com.conflict.entities.UserPref</class>
+	<class>com.conflict.entities.Beh</class>
+	<class>com.conflict.entities.Comportement</class>
+	
+
+      <properties>
+         <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mabase"/>
+         <property name="javax.persistence.jdbc.user" value="root"/>
+         <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+         <property name="eclipselink.logging.level" value="FINE"/>
+         <property name="eclipselink.ddl-generation" value="update-tables"/>
+         <property name="javax.persistence.schema-generation.database.action" value="update"/>
+         <property name="javax.persistence.schema-generation.scripts.action" value="update"/>
+      </properties>
+	</persistence-unit>
+</persistence>
